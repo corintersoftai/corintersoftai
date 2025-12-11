@@ -1,216 +1,237 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="es-419">
 <head>
     <base href="/corintersoftai/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CorinterSoft AI - Cursos de Inteligencia Artificial</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="/index.css">
+<link rel="stylesheet" href="/index.css">
 </head>
-
 <body>
 
-    <!-- Header / Navbar -->
-    <header class="header">
+    <!-- Fondo principal con superposición -->
+    <div class="hero-background">
+        <img src="https://picsum.photos/id/532/1920/1080" alt="Fondo AI">
+        <div class="overlay"></div>
+    </div>
+
+    <!-- Cabecera -->
+    <header>
         <div class="logo-container">
             <h1 class="brand-logo">CorinterSoft AI</h1>
         </div>
+        <!-- Botones de idioma e inicio de sesión eliminados según solicitud -->
     </header>
 
-    <!-- Hero Section (Netflix Style) -->
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1 class="hero-title">Domina la Inteligencia Artificial hoy mismo.</h1>
-            <p class="hero-subtitle">Cursos prácticos, explicaciones sencillas y aprendizaje a tu ritmo.</p>
-            <p class="hero-cta-text">¿Quieres comenzar? Ingresa tu email para crear tu cuenta o reiniciar tu
-                aprendizaje.</p>
-
-            <form class="hero-form"
-                onsubmit="event.preventDefault(); alert('¡Gracias! Pronto recibirás información.');">
-                <div class="input-container">
+    <!-- Sección Héroe -->
+    <section class="hero-content">
+        <h1>Inteligencia Artificial para todos, sin complicaciones.</h1>
+        <p class="subtitle">Aprende a usar las herramientas del futuro hoy mismo. No necesitas saber programación. Cursos prácticos y fáciles de entender.</p>
+        
+        <div class="signup-form">
+            <h3>¿Quieres empezar? Ingresa tu email para recibir el temario gratuito.</h3>
+            <form id="hero-form" onsubmit="event.preventDefault();">
+                <div class="input-group">
                     <input type="email" placeholder="Email" required>
-                    <label>Email</label>
+                    <button type="submit">
+                        Comenzar 
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg>
+                    </button>
                 </div>
-                <button type="submit" class="btn-primary">
-                    Comenzar <span class="arrow">></span>
-                </button>
             </form>
         </div>
     </section>
 
-    <!-- Modelos IA Section (Netflix Trends Style) -->
-    <section class="section-container">
+    <!-- Separador Curvo o Gradiente -->
+    <div class="section-divider"></div>
+
+    <!-- Sección Modelos IA (Estilo Tendencias) -->
+    <section class="models-section">
         <h2 class="section-title">Modelos IA</h2>
-        <div class="models-slider">
-            <!-- Card 1 -->
+        <div class="models-container">
+            
+            <!-- Carta 1 -->
             <div class="model-card">
                 <span class="rank-number">1</span>
-                <div class="card-image" style="background-image: url('https://picsum.photos/300/450?random=1');">
-                    <span class="model-name">ChatGPT</span>
+                <div class="card-image">
+                    <img src="https://picsum.photos/id/1/300/400" alt="ChatGPT">
+                    <div class="card-overlay">ChatGPT</div>
                 </div>
             </div>
-            <!-- Card 2 -->
+
+            <!-- Carta 2 -->
             <div class="model-card">
                 <span class="rank-number">2</span>
-                <div class="card-image" style="background-image: url('https://picsum.photos/300/450?random=2');">
-                    <span class="model-name">Gemini</span>
+                <div class="card-image">
+                    <img src="https://picsum.photos/id/20/300/400" alt="Gemini">
+                    <div class="card-overlay">Gemini</div>
                 </div>
             </div>
-            <!-- Card 3 -->
+
+            <!-- Carta 3 -->
             <div class="model-card">
                 <span class="rank-number">3</span>
-                <div class="card-image" style="background-image: url('https://picsum.photos/300/450?random=3');">
-                    <span class="model-name">Google AI Studio</span>
+                <div class="card-image">
+                    <img src="https://picsum.photos/id/60/300/400" alt="Google AI Studio">
+                    <div class="card-overlay">Google AI Studio</div>
                 </div>
             </div>
-            <!-- Card 4 -->
+
+            <!-- Carta 4 -->
             <div class="model-card">
                 <span class="rank-number">4</span>
-                <div class="card-image" style="background-image: url('https://picsum.photos/300/450?random=4');">
-                    <span class="model-name">Nano Banana</span>
+                <div class="card-image">
+                    <img src="https://picsum.photos/id/96/300/400" alt="Nano Banana">
+                    <div class="card-overlay">Nano Banana</div>
                 </div>
             </div>
-            <!-- Card 5 -->
+
+            <!-- Carta 5 -->
             <div class="model-card">
                 <span class="rank-number">5</span>
-                <div class="card-image" style="background-image: url('https://picsum.photos/300/450?random=5');">
-                    <span class="model-name">Veo3</span>
+                <div class="card-image">
+                    <img src="https://picsum.photos/id/119/300/400" alt="Veo3">
+                    <div class="card-overlay">Veo3</div>
                 </div>
             </div>
-            <!-- Card 6 -->
-            <div class="model-card">
+
+             <!-- Carta 6 -->
+             <div class="model-card">
                 <span class="rank-number">6</span>
-                <div class="card-image" style="background-image: url('https://picsum.photos/300/450?random=6');">
-                    <span class="model-name">GLM 4.6</span>
+                <div class="card-image">
+                    <img src="https://picsum.photos/id/180/300/400" alt="GLM 4.6">
+                    <div class="card-overlay">GLM 4.6</div>
                 </div>
             </div>
+
         </div>
     </section>
 
-    <!-- Motivos para unirte (Netflix Features Style) -->
-    <section class="section-container">
+    <!-- Sección Motivos para unirte -->
+    <section class="reasons-section">
         <h2 class="section-title">Más motivos para unirte</h2>
-        <div class="features-grid">
-            <div class="feature-card">
+        <div class="reasons-grid">
+            
+            <div class="reason-card">
                 <h3>Aprende desde cero</h3>
-                <p>No necesitas conocimientos previos de programación o tecnología. Explicamos todo paso a paso.</p>
-                <div class="feature-icon">🎓</div>
+                <p>Nuestros cursos están diseñados para principiantes. Te explicamos todo paso a paso, sin términos complicados.</p>
+                <div class="icon-container">
+                    <svg viewBox="0 0 24 24" width="40" height="40" fill="#0056b3"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                </div>
             </div>
-            <div class="feature-card">
-                <h3>Descarga guías prácticas</h3>
-                <p>Guarda tus apuntes y ejercicios para repasarlos cuando no tengas conexión.</p>
-                <div class="feature-icon">⬇️</div>
+
+            <div class="reason-card">
+                <h3>Mejora tu productividad</h3>
+                <p>Descubre cómo la IA puede hacer tu trabajo diario más rápido y eficiente. Automatiza tareas aburridas.</p>
+                <div class="icon-container">
+                     <svg viewBox="0 0 24 24" width="40" height="40" fill="#0056b3"><path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/></svg>
+                </div>
             </div>
-            <div class="feature-card">
-                <h3>A tu propio ritmo</h3>
-                <p>Accede a las clases desde tu computadora, tablet o celular cuando quieras.</p>
-                <div class="feature-icon">📱</div>
+
+            <div class="reason-card">
+                <h3>Estudia donde quieras</h3>
+                <p>Acceso ilimitado desde tu computadora, tablet o celular. Aprende a tu propio ritmo desde casa.</p>
+                <div class="icon-container">
+                    <svg viewBox="0 0 24 24" width="40" height="40" fill="#0056b3"><path d="M4 6h18V4H4c-1.1 0-2 .9-2 2v11H0v3h14v-3H4V6zm19 2h-6c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1zm-1 9h-4v-7h4v7z"/></svg>
+                </div>
             </div>
-            <div class="feature-card">
-                <h3>Proyectos reales</h3>
-                <p>Crea imágenes, textos y videos impresionantes desde la primera semana.</p>
-                <div class="feature-icon">🤖</div>
+
+            <div class="reason-card">
+                <h3>Comunidad de apoyo</h3>
+                <p>Únete a un grupo de personas que, como tú, están descubriendo el poder de la Inteligencia Artificial.</p>
+                <div class="icon-container">
+                    <svg viewBox="0 0 24 24" width="40" height="40" fill="#0056b3"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                </div>
             </div>
+
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="section-container faq-section">
+    <!-- Sección FAQ -->
+    <section class="faq-section">
         <h2 class="section-title">Preguntas frecuentes</h2>
-        <ul class="accordion">
-            <li class="accordion-item">
-                <button class="accordion-button">¿Qué es CorinterSoft AI?</button>
-                <div class="accordion-content">
-                    <p>CorinterSoft AI es una plataforma educativa diseñada para enseñar el uso de herramientas de
-                        Inteligencia Artificial Generativa a personas sin experiencia técnica previa.</p>
-                </div>
-            </li>
-            <li class="accordion-item">
-                <button class="accordion-button">¿Cuánto cuesta el curso?</button>
-                <div class="accordion-content">
-                    <p>Ofrecemos planes accesibles desde pagos mensuales hasta anuales. Puedes cancelar tu suscripción
-                        en cualquier momento sin cargos extra.</p>
-                </div>
-            </li>
-            <li class="accordion-item">
-                <button class="accordion-button">¿Dónde puedo ver las clases?</button>
-                <div class="accordion-content">
-                    <p>Inicia sesión con tu cuenta de CorinterSoft AI para ver las clases al instante desde tu
-                        computadora personal o en cualquier dispositivo con conexión a internet.</p>
-                </div>
-            </li>
-            <li class="accordion-item">
-                <button class="accordion-button">¿Cómo cancelo?</button>
-                <div class="accordion-content">
-                    <p>CorinterSoft AI es flexible. Sin contratos molestos ni compromisos. Cancela fácilmente en línea
-                        con dos clics. Sin cargos por cancelación.</p>
-                </div>
-            </li>
-            <li class="accordion-item">
-                <button class="accordion-button">¿Qué aprenderé?</button>
-                <div class="accordion-content">
-                    <p>Aprenderás a usar ChatGPT, crear imágenes con IA, automatizar tareas diarias y entender cómo
-                        funcionan los modelos de lenguaje más populares del mercado.</p>
-                </div>
-            </li>
-            <li class="accordion-item">
-                <button class="accordion-button">¿Es bueno para principiantes?</button>
-                <div class="accordion-content">
-                    <p>¡Absolutamente! Nuestros cursos están diseñados específicamente para personas que nunca han
-                        interactuado con la IA, utilizando un lenguaje claro y amigable.</p>
-                </div>
-            </li>
-        </ul>
-
-        <div class="bottom-cta-form">
-            <p>¿Quieres aprender IA ya? Ingresa tu email para crear una cuenta.</p>
-            <form class="hero-form inline-form"
-                onsubmit="event.preventDefault(); alert('¡Gracias! Pronto recibirás información.');">
-                <div class="input-container">
-                    <input type="email" placeholder="Email" required>
-                    <label>Email</label>
-                </div>
-                <button type="submit" class="btn-primary">
-                    Comenzar <span class="arrow">></span>
+        <div class="accordion">
+            
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    ¿Qué es CorinterSoft AI?
+                    <span class="icon">+</span>
                 </button>
+                <div class="accordion-content">
+                    <p>CorinterSoft AI es una plataforma educativa diseñada para enseñar a personas sin experiencia técnica cómo utilizar herramientas de Inteligencia Artificial generativa para mejorar su vida personal y profesional.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    ¿Necesito saber programar?
+                    <span class="icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <p>¡Para nada! Nuestros cursos están enfocados en el uso práctico de herramientas ya existentes. No verás código complejo, solo aprenderás a comunicarte con la IA.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    ¿Qué herramientas aprenderé a usar?
+                    <span class="icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <p>Aprenderás a dominar ChatGPT, Gemini, creación de imágenes y videos con IA, y mucho más. Actualizamos el contenido constantemente.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    ¿Cómo me inscribo?
+                    <span class="icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <p>Es muy sencillo. Solo ingresa tu correo electrónico en el formulario de arriba y nos pondremos en contacto contigo con los pasos a seguir.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Formulario inferior -->
+        <div class="signup-form bottom-form">
+            <h3>¿Quieres ver CorinterSoft AI en acción? Ingresa tu email.</h3>
+            <form onsubmit="event.preventDefault();">
+                <div class="input-group">
+                    <input type="email" placeholder="Email" required>
+                    <button type="submit">
+                        Comenzar 
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg>
+                    </button>
+                </div>
             </form>
         </div>
     </section>
 
-    <!-- Airbnb Style Support Section -->
+    <!-- Sección de Soporte WhatsApp (Referencia imagen 4) -->
     <section class="support-section">
-        <div class="support-content">
-            <h2>¿Sigues teniendo dudas?</h2>
-            <p>Recibe ayuda de un instructor experto en tecnología.</p>
-            <button class="btn-support">Pregunta a un experto</button>
+        <div class="support-container">
+            <div class="support-content">
+                <h2>¿Sigues teniendo dudas?</h2>
+                <p>Recibe ayuda personalizada de nuestro equipo a través de WhatsApp.</p>
+                <a href="https://wa.me" target="_blank" class="whatsapp-btn">
+                    <!-- Icono SVG de WhatsApp -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                    Escríbenos al WhatsApp
+                </a>
+            </div>
+        </div>
+        
+        <!-- Disclaimer tipo footer -->
+        <div class="footer-note">
+            <p>CorinterSoft AI se dedica a la enseñanza de tecnologías de vanguardia. No estamos afiliados directamente con OpenAI, Google ni otras marcas mencionadas, solo enseñamos a usarlas.</p>
+            <p>© 2024 CorinterSoft AI. Todos los derechos reservados.</p>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>¿Preguntas? Llama al 0-800-123-4567</p>
-        <div class="footer-links">
-            <a href="#">Preguntas frecuentes</a>
-            <a href="#">Centro de ayuda</a>
-            <a href="#">Cuenta</a>
-            <a href="#">Prensa</a>
-            <a href="#">Relaciones con inversionistas</a>
-            <a href="#">Empleo</a>
-            <a href="#">Formas de ver</a>
-            <a href="#">Términos de uso</a>
-            <a href="#">Privacidad</a>
-            <a href="#">Preferencias de cookies</a>
-            <a href="#">Información corporativa</a>
-            <a href="#">Contáctanos</a>
-        </div>
-        <p class="copyright">CorinterSoft AI Latinoamérica</p>
-    </footer>
-
     <script src="script.js"></script>
-    <script type="module" src="/index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
 </body>
-
 </html>

@@ -1,49 +1,40 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     
-    // Accordion Logic
-    const acc = document.getElementsByClassName("accordion-button");
-    
-    for (let i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
-            // Toggle active class on button
-            this.classList.toggle("active");
+    // Selección de todos los botones del acordeón
+    const accHeaders = document.querySelectorAll('.accordion-header');
 
-            // Toggle panel visibility
-            const panel = this.nextElementSibling;
-            if (panel.style.maxHeight) {
-                panel.style.maxHeight = null;
+    accHeaders.forEach(header => {
+        header.addEventListener('click', function() {
+            // Alternar la clase activa en el botón clickeado
+            this.classList.toggle('active');
+
+            // Seleccionar el panel de contenido asociado
+            const content = this.nextElementSibling;
+
+            // Lógica para abrir/cerrar con animación de max-height
+            if (content.style.maxHeight) {
+                // Si ya tiene altura, lo cerramos
+                content.style.maxHeight = null;
             } else {
-                // Close other open panels (optional, but cleaner)
-                const allPanels = document.querySelectorAll('.accordion-content');
-                const allBtns = document.querySelectorAll('.accordion-button');
+                // Cerramos otros abiertos (opcional, estilo Netflix cierra los otros o los deja, 
+                // Netflix permite múltiples abiertos, pero para limpieza cerramos los demás aquí si se quisiera.
+                // Dejaremos múltiples abiertos para mejor UX en móvil).
                 
-                allPanels.forEach(p => p.style.maxHeight = null);
-                allBtns.forEach(b => {
-                    if (b !== this) b.classList.remove('active');
-                });
-
-                // Open this panel
-                panel.style.maxHeight = panel.scrollHeight + "px";
-                this.classList.add("active");
-            } 
+                // Asignamos la altura del scroll para animar la apertura
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
         });
-    }
+    });
 
-    // Input Labels Animation Helper (for consistent styling on page load if values exist)
-    const inputs = document.querySelectorAll('.hero-form input');
-    
-    inputs.forEach(input => {
-        // Check on load
-        if(input.value !== "") {
-            input.setAttribute('data-has-value', 'true');
-        }
-
-        // Check on change
-        input.addEventListener('input', function() {
-            if(this.value !== "") {
-                this.setAttribute('data-has-value', 'true');
-            } else {
-                this.removeAttribute('data-has-value');
+    // Validar formulario (simple feedback visual)
+    const forms = document.querySelectorAll('form');
+    forms.forEach(form => {
+        form.addEventListener('submit', (e) => {
+            // El preventDefault ya está en el HTML, esto es extra feedback
+            const emailInput = form.querySelector('input[type="email"]');
+            if(emailInput.value) {
+                alert('¡Gracias por tu interés! Te enviaremos el temario a: ' + emailInput.value);
+                emailInput.value = ''; // Limpiar campo
             }
         });
     });
